@@ -1,0 +1,44 @@
+html, body {
+  height: 100%;
+}
+body {
+  overflow: hidden;
+  font-size: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+}
+#wrapper {
+  position: relative;
+}
+button {
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.entry {
+  position: absolute;
+  width: 100vw;
+  max-width: 500px;
+  transform: translate(-50%, -50%);
+}
+.message {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.interaction {
+  font-size: 16px;
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+  transition: all .2s;
+}
+.interaction:hover {
+  padding-left: 15px;
+  padding-bottom: 3px;
+  border-bottom-width: 3px;
+}
