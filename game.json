@@ -13,6 +13,8 @@
     "choices": {
       "Continue": {
         "special": "title",
+        "title": "Pistole offers a wide range of opportunities.",
+        "subtitle": "A work of fiction, &c.",
         "continue": "intro"
       }
     }
