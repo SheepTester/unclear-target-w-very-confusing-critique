@@ -13,6 +13,7 @@ let height = window.innerHeight
 
 const MIN_TOP = 20
 function updateScenes () {
+  if (!sceneOrder.length) return
   const base = (height + boundingBoxes.get(sceneOrder[0].elem).height) / 2
   let offset = 0
   for (const {elem} of sceneOrder) {
@@ -32,6 +33,10 @@ const sceneTypes = {
       Elem('div', {
         className: 'choice',
         onclick: e => {
+          while (sceneOrder.length > 1) {
+            document.body.removeChild(sceneOrder[sceneOrder.length - 1].elem)
+            sceneOrder.pop()
+          }
           entry.setScene(scene.continue)
           e.stopPropagation()
         }
@@ -89,15 +94,17 @@ fetch('./game.json')
         sceneTypes[scene.special || 'default'](entry, scene)
         document.body.appendChild(entry.elem)
         sceneOrder.unshift(entry)
+
+        if (scene.fail) {
+          entry.elem.appendChild(Elem('div', {className: 'note'}, ['Click above to retry.']))
+        }
       }
 
-      entry.setScene = newScene => {
-        scene = newScene
-        done()
-      }
+      entry.setScene = done
       entry.elem.classList.remove('uninteractable')
+      if (scene.fail) document.body.classList.add('fail')
 
-      await Promise.all([
+      const [newScene] = await Promise.all([
         sceneEndProm,
         new Promise(res => window.requestAnimationFrame(() => {
           boundingBoxes.set(entry.elem, entry.elem.getBoundingClientRect())
@@ -108,6 +115,9 @@ fetch('./game.json')
 
       entry.setScene = VOID
       entry.elem.classList.add('uninteractable')
+      if (scene.fail) document.body.classList.remove('fail')
+
+      scene = newScene
     }
   })
 

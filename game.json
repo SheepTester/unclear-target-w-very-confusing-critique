@@ -23,7 +23,7 @@
     "message": "Pistole High School",
     "choices": {
       "die": {
-        "death": true,
+        "fail": true,
         "message": "Such is life."
       }
     }

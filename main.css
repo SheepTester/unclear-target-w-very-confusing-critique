@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   word-break: break-word;
+  transition: background-color .2s;
 }
 
 @keyframes fade-in {
@@ -24,6 +25,11 @@ body {
   }
 }
 
+.fail {
+  background-color: black;
+  color: red;
+}
+
 .entry {
   position: absolute;
   width: 100vw;
@@ -40,28 +46,52 @@ body {
   cursor: pointer;
 }
 
+.note {
+  opacity: 0.5;
+  font-size: 14px;
+}
+
 .choice {
   position: relative;
   padding: 5px;
   margin: 5px 0;
-  background-color: rgba(0, 0, 0, 0.05);
   cursor: pointer;
-  transition: all .2s;
 }
 .uninteractable .choice {
   pointer-events: none;
 }
-.choice:hover {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+.choice::before,
+.choice::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
-.choice:active {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6);
+.choice::before {
+  background-color: currentColor;
+  opacity: 0.05;
+}
+.choice::after {
+  border: 0 solid currentColor;
+  opacity: 0;
+  transition: all .2s;
+}
+.choice:hover::after {
+  border-width: 3px;
+  opacity: 0.2;
+}
+.choice:active::after {
+  border-width: 1px;
+  opacity: 0.6;
 }
 
 .title {
   font-size: 48px;
   font-weight: bold;
-  animation: pop-in 1s;
+  animation: pop-in 1s cubic-bezier(0.5, 0, 0, 1);
   line-height: 0.8;
   margin-top: 20px;
   position: relative;
