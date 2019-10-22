@@ -1,0 +1,23 @@
+{
+  "INIT": {
+    "message": "These are some of the available EGO program mentors based on the rumours your friends have collected. Who would you rather have?",
+    "choices": {
+      "Mrs. Hugson, a sweet lady known to bake cookies for her students every day. Although one's health may be of concern in being enticed by her pasteries, it would certainly be a punishment to smell their aroma as a nonstudent.": "psych",
+      "Mr. Elasier, an otherwise ordinary teacher who, with his isolated portable classroom and being a long-term employee of the Vertically Challenging Pole Unified School District, never enforces the school policies, allowing his students to eat, play, or even cut during class.": "psych",
+      "Mr. Katet, a mysterious fellow about whom little is known; his former students would only repeat the ominous word \"kittens\" whenever he was brought up.": "psych",
+      "Ms. Sens, an understanding individual who would never disallow her students doing work for other classes, for she found it an act of respect demonstrating that the students found her class to be an opportunity to destress rather than a source of academic pressure.": "psych"
+    }
+  },
+  "psych": {
+    "message": "Unfortunately, the school randomly assigns mentors to students and does not take specific teacher requests, as the school believes in exposing students to a variety of teaching and learning styles.",
+    "choices": {
+      "Continue": {
+        "special": "title",
+        "continue": "intro"
+      }
+    }
+  },
+  "intro": {
+    "message": "Pistole High School"
+  }
+}

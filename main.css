@@ -1,44 +1,45 @@
-html, body {
-  height: 100%;
-}
 body {
-  overflow: hidden;
   font-size: 0;
   margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: 'Lato', sans-serif;
-}
-#wrapper {
-  position: relative;
-}
-button {
-  -webkit-appearance: none;
-  border: none;
-  background: none;
-  font: inherit;
-  cursor: pointer;
 }
 
 .entry {
   position: absolute;
   width: 100vw;
   max-width: 500px;
-  transform: translate(-50%, -50%);
-}
-.message {
-  font-size: 16px;
   line-height: 1.5;
-}
-.interaction {
   font-size: 16px;
-  padding: 5px 0;
-  border-bottom: 1px solid black;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all .2s;
+  animation: come-in .5s;
+}
+@keyframes come-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.uninteractable {
+  opacity: 0.3;
+}
+.choice {
+  position: relative;
+  padding: 5px;
+  margin: 5px 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
   transition: all .2s;
 }
-.interaction:hover {
-  padding-left: 15px;
-  padding-bottom: 3px;
-  border-bottom-width: 3px;
+.uninteractable .choice {
+  pointer-events: none;
+}
+.choice:hover {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.choice:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6);
 }
