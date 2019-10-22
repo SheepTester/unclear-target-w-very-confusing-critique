@@ -19,27 +19,50 @@
       }
     }
   },
+  "pole-intro": {
+    "message": "A 1769 expedition party encounters a troublesome metal rod mysteriously found erected on the ground; it had impaled the party’s main wagon, so the expeditioners camped nearby for several days for repairs. What should they do to the pole?",
+    "choices": {
+      "Call it the Vertically Challenging Pole and found a town named after it.": "ego-intro",
+      "Remove the pole to avoid further casualties.": {
+        "message": "The members agree to pull out the pole; however, they cannot resist the temptation to found a town around it. The resulting town is aptly named Vertically Challenging Pole. Meanwhile, several attempts are made to remove the pole, but all fail; consequently, the members suffer major injuries and give up. The pole will later be toppled over by an unmanned vehicle in 1983.",
+        "choices": {"Continue": "ego-intro"}
+      }
+    }
+  },
   "ego-intro": {
-    "message": "Pistole High School is a humble high school in Vertically Challenging Pole, a humble town founded around a troublesome metal rod mysteriously found erected on the ground. As one of the top schools in the nation, with two thousand students attending each year, parents flock from around the world just to send their kids to the school. This led to a spike in academic stress on the students, which VCPUSD (Vertically Challenging Pole Unified School District) set out to reduce. They established Mr. Etresfeul, a teacher with whom the district knew all the students were familiar (five students were randomly selected and shown a labelled photo of Mr. Estresfeul; all students were able to correctly identify him), as the head of a new program: the EGO program, whose letters stood for _E_xercise, _G_ood night's sleep, and _O_mm--three of the seventy-six easy-to-remember tips for reducing stress that would be taught in the program.\nIn addition to eliminating stress, the EGO program would also teach important virtues such as the equal treatment of all students, no matter their race, sexuality, or age. Due to the novelty of the program, it was to be mandatory only for the underclassmen. Ego sessions would take place during the latter of the two weekly free periods--times for students to catch up on their schoolwork and meet their teachers outside of class (teachers participating in the EGO program would not be available to non-EGO students). The sessions would only meet weekly for half a period, compared to the other periods occurring multiple times a week, as to not seem too intrusive. To encourage relationship building, the students would be randomly grouped into isolated cohorts that were to remain the same throughout high school for cohort members to grow more familiar with each other than as they would with their classmates in other classes.",
+    "message": "Pistole High School, established in 1964, is a humble high school in Vertically Challenging Pole. As one of the top schools in the nation, with two thousand students attending each year, parents flock from around the world just to send their kids to the school. This has led to a spike in academic stress on the students, which the school administration intends on reducing.",
     "choices": {
-      "Continue": "char-intro"
+      "Establish Mr. Etresfeul, a teacher with whom the district knew all the students were familiar (five students were randomly selected and shown a labelled photo of Mr. Etresfeul, and all were able to correctly identify him), as the head of a new program.": {
+        "message": "The school initiates the EGO program (_E_xercise, _G_ood night's sleep, and _O_mm--three of the seventy-six easy-to-remember tips for reducing stress that would be taught in the program). When should EGO sessions take place?",
+        "choices": {
+          "During lunch": {
+            "message": "Students need to eat and attend clubs!",
+            "fail": true
+          },
+          "After school": {
+            "message": "This would cause problems with students with after-school activities.",
+            "fail": true
+          },
+          "During the latter of the two weekly free periods--times for students to catch up on their schoolwork and meet their teachers outside of class": {
+            "message": "The school enthusiastically commends this idea. Of course, teachers participating in the EGO program will not be available to non-EGO students, but this can be resolved later.",
+            "choices": {
+              "Continue": {
+                "message": "They decide the sessions would only meet once a week for half a period, compared to the other periods occurring multiple times a week, as to not seem too intrusive. To encourage relationship building, the students will be randomly grouped into isolated cohorts, which are to remain the same throughout high school, for cohort members to grow more familiar with each other than they would with their classmates in other classes.\nIn addition to eliminating stress, it will also teach important virtues such as the equal treatment of all students, no matter their race, sexuality, or age. Which grades should have mandatory participation?",
+                "choices": {
+                  "All grades": {
+                    "message": "There are not enough mentors for all the EGO cohorts.",
+                    "fail": true
+                  },
+                  "The freshmen only": "begin-story"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
-  "char-intro": {
-    "message": "The first week as a high school freshman is a week of new experiences, so, of course, one should try to experience as many new things as possible. However, not even the older grades who had volunteered in the introductory freshman initiation camp could have predicted that instead of the freshmen being introduced to the freedom granted by the free periods, the school decided that *both* free periods should be spent on presenting their new EGO programs to them.\nAs you walk towards your first EGO session, you spot your enemy, Nevets Eux, in the reflection of some classroom window. What should you do?",
-    "choices": {
-      "Punch him": {
-        "message": "You realise punching a reflection may have disastrous side effects, and you cowardly retreat.",
-        "choices": {"Continue": "char-intro2"}
-      },
-      "Turn around and punch him": {
-        "message": "Before punching, you take a deep breath and reconsider your actions. You decide physical contact would be inappropriate in this situation.",
-        "choices": {"Continue": "char-intro2"}
-      },
-      "Turn around and say hello": "char-intro2"
-    }
-  },
-  "char-intro2": {
-    "message": "As it turns out, the person in the window was yourself."
+  "begin-story": {
+    "message": "The first week as a high school freshman is a week of new experiences, so, of course, one should try to experience as many new things as possible. However, not even the older grades who had volunteered in the introductory freshman initiation camp could have predicted that instead of the freshmen being introduced to the freedom granted by the free periods, the school decided that *both* free periods should be spent on presenting their new EGO programs to them.\n..."
   }
 }
