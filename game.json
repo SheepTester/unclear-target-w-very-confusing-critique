@@ -2,7 +2,7 @@
   "INIT": {
     "message": "These are some of the available EGO program mentors based on the rumours your friends have collected. Who would you rather have?",
     "choices": {
-      "Mrs. Hugson, a sweet lady known to bake cookies for her students every day. Although one's health may be of concern in being enticed by her pasteries, it would certainly be a punishment to smell their aroma as a nonstudent.": "psych",
+      "Mrs. Hugson, a sweet lady known to bake cookies for her students every day. Although one's health may be of concern in being enticed by her pasteries, it would certainly be a punishment to have to smell their inviting aroma as a nonstudent.": "psych",
       "Mr. Elasier, an otherwise ordinary teacher who, with his isolated portable classroom and being a long-term employee of the Vertically Challenging Pole Unified School District, never enforces the school policies, allowing his students to eat, play, or even cut during class.": "psych",
       "Mr. Katet, a mysterious fellow about whom little is known; his former students would only repeat the ominous word \"kittens\" whenever he was brought up.": "psych",
       "Ms. Sens, an understanding individual who would never disallow her students doing work for other classes, for she found it an act of respect demonstrating that the students found her class to be an opportunity to destress rather than a source of academic pressure.": "psych"
@@ -20,17 +20,26 @@
     }
   },
   "ego-intro": {
-    "message": "Pistole High School is a humble high school in Vertically Challenging Pole, a humble town founded around a troublesome metal rod mysteriously found erected on the ground. As one of the top schools in the nation, with two thousand students attending each year, parents flock from around the world just to send their kids to the school. This led to a spike in academic stress on the students, which VCPUSD (Vertically Challenging Pole Unified School District) set out to reduce. They established Mr. Etresfeul, a teacher with whom the district knew all the students were familiar (five students were randomly selected and shown a labelled photo of Mr. Estresfeul; all students were able to correctly identify him), as the head of a new program: the EGO program, whose letters stood for Exercise, Good night's sleep, and Omm—three of the seventy-six easy-to-remember tips for reducing stress that would be taught in the program.",
+    "message": "Pistole High School is a humble high school in Vertically Challenging Pole, a humble town founded around a troublesome metal rod mysteriously found erected on the ground. As one of the top schools in the nation, with two thousand students attending each year, parents flock from around the world just to send their kids to the school. This led to a spike in academic stress on the students, which VCPUSD (Vertically Challenging Pole Unified School District) set out to reduce. They established Mr. Etresfeul, a teacher with whom the district knew all the students were familiar (five students were randomly selected and shown a labelled photo of Mr. Estresfeul; all students were able to correctly identify him), as the head of a new program: the EGO program, whose letters stood for _E_xercise, _G_ood night's sleep, and _O_mm--three of the seventy-six easy-to-remember tips for reducing stress that would be taught in the program.\nIn addition to eliminating stress, the EGO program would also teach important virtues such as the equal treatment of all students, no matter their race, sexuality, or age. Due to the novelty of the program, it was to be mandatory only for the underclassmen. Ego sessions would take place during the latter of the two weekly free periods--times for students to catch up on their schoolwork and meet their teachers outside of class (teachers participating in the EGO program would not be available to non-EGO students). The sessions would only meet weekly for half a period, compared to the other periods occurring multiple times a week, as to not seem too intrusive. To encourage relationship building, the students would be randomly grouped into isolated cohorts that were to remain the same throughout high school for cohort members to grow more familiar with each other than as they would with their classmates in other classes.",
     "choices": {
-      "Continue": {
-        "message": "In addition to eliminating stress, the EGO program would also teach important virtues such as the equal treatment of all students, no matter their race, sexuality, or age. Due to the novelty of the program, it was to be mandatory only for the underclassmen. The free period—a time for students to catch up on their schoolwork and meet their teachers outside of class—would be replaced with EGO sessions (teachers participating in the EGO program would not be available to non-EGO students). The sessions would only meet weekly for half a period, compared to the other periods occurring multiple times a week, as to not seem too intrusive. To encourage relationship building, the students would be randomly grouped into isolated cohorts that were to remain the same throughout high school for cohort members to grow more familiar with each other than as they would with their classmates in other classes.",
-        "choices": {
-          "Continue": "char-intro"
-        }
-      }
+      "Continue": "char-intro"
     }
   },
   "char-intro": {
-    "message": "yes."
+    "message": "The first week as a high school freshman is a week of new experiences, so, of course, one should try to experience as many new things as possible. However, not even the older grades who had attended their introductory freshamn initiation camp could have predicted that instead of the freshmen being presented the freedom granted by the free periods, the school decided that *both* free periods should be spent on introducing them their new EGO programs.\nYou spot your enemy, Nevets Eux, in the reflection of some classroom window as you walk towards your first EGO session. What should you do?",
+    "choices": {
+      "Punch him": {
+        "message": "You realize punching a reflection may have disasterous side effects, and you cowardly retreat.",
+        "choices": {"Continue": "char-intro2"}
+      },
+      "Turn around and punch him": {
+        "message": "Before punching, you take a deep breath and reconsider your actions. You decide physical contact would be inappropriate in this situation.",
+        "choices": {"Continue": "char-intro2"}
+      },
+      "Turn around and say hello": "char-intro2"
+    }
+  },
+  "char-intro2": {
+    "message": "As it turns out, the person in the window was yourself."
   }
 }

@@ -14,14 +14,30 @@ let height = window.innerHeight
 const MIN_TOP = 20
 function updateScenes () {
   if (!sceneOrder.length) return
-  const base = (height + boundingBoxes.get(sceneOrder[0].elem).height) / 2
+  const firstBox = boundingBoxes.get(sceneOrder[0].elem)
+  const base = firstBox.height > height - MIN_TOP ? MIN_TOP + firstBox.height : (height + firstBox.height) / 2
   let offset = 0
   for (const {elem} of sceneOrder) {
     const box = boundingBoxes.get(elem)
     offset += box.height
-    elem.style.top = (base - offset < MIN_TOP && elem === sceneOrder[0].elem ? MIN_TOP : base - offset) + 'px'
+    elem.style.top = (base - offset) + 'px'
     elem.style.left = ((width - box.width) / 2) + 'px'
   }
+}
+
+function format(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/\*[^*\\]+\*/g, em => `<em>${em.slice(1, -1)}</em>`) // *text* italicizes it
+    .replace(/\*\\/g, '*') // *\ -> * (hopefully)
+    .replace(/_[^_\\]+_/g, ins => `<ins>${ins.slice(1, -1)}</ins>`) // _text_ underlines it
+    .replace(/_\\/g, '_') // _\ -> _
+    .replace(/--/g, '&mdash;')
+    .split('\n')
+    .map(p => `<p>${p}</p>`)
+    .join('')
 }
 
 const sceneTypes = {
@@ -45,15 +61,16 @@ const sceneTypes = {
   },
   default: (entry, scene) => {
     entry.elem.appendChild(Fragment([
-      Elem('div', {className: 'message'}, [scene.message]),
+      Elem('div', {className: 'message', innerHTML: format(scene.message)}),
       ...Object.entries(scene.choices || {}).map(([choiceMsg, choiceScene]) =>
         Elem('div', {
           className: 'choice',
+          innerHTML: format(choiceMsg),
           onclick: e => {
             entry.setScene(choiceScene)
             e.stopPropagation()
           }
-        }, [choiceMsg]))
+        }))
     ]))
   }
 }
@@ -65,6 +82,7 @@ fetch('./game.json')
     while (scene) {
       if (typeof scene === 'string') {
         scene = gameData[scene]
+        continue
       }
 
       const {promise: sceneEndProm, resolve: done} = createResolvablePromise()
