@@ -26,10 +26,10 @@
     }
   },
   "char-intro": {
-    "message": "The first week as a high school freshman is a week of new experiences, so, of course, one should try to experience as many new things as possible. However, not even the older grades who had attended their introductory freshamn initiation camp could have predicted that instead of the freshmen being presented the freedom granted by the free periods, the school decided that *both* free periods should be spent on introducing them their new EGO programs.\nYou spot your enemy, Nevets Eux, in the reflection of some classroom window as you walk towards your first EGO session. What should you do?",
+    "message": "The first week as a high school freshman is a week of new experiences, so, of course, one should try to experience as many new things as possible. However, not even the older grades who had volunteered in the introductory freshman initiation camp could have predicted that instead of the freshmen being introduced to the freedom granted by the free periods, the school decided that *both* free periods should be spent on presenting their new EGO programs to them.\nAs you walk towards your first EGO session, you spot your enemy, Nevets Eux, in the reflection of some classroom window. What should you do?",
     "choices": {
       "Punch him": {
-        "message": "You realize punching a reflection may have disasterous side effects, and you cowardly retreat.",
+        "message": "You realise punching a reflection may have disastrous side effects, and you cowardly retreat.",
         "choices": {"Continue": "char-intro2"}
       },
       "Turn around and punch him": {
