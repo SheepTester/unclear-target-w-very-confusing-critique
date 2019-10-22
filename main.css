@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   word-break: break-word;
+  white-space: pre-wrap;
   transition: background-color .2s;
 }
 

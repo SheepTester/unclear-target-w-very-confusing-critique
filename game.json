@@ -15,17 +15,22 @@
         "special": "title",
         "title": "Pistole offers a wide range of opportunities.",
         "subtitle": "A work of fiction, &c.",
-        "continue": "intro"
+        "continue": "ego-intro"
       }
     }
   },
-  "intro": {
-    "message": "Pistole High School",
+  "ego-intro": {
+    "message": "Pistole High School is a humble high school in Vertically Challenging Pole, a humble town founded around a troublesome metal rod mysteriously found erected on the ground. As one of the top schools in the nation, with two thousand students attending each year, parents flock from around the world just to send their kids to the school. This led to a spike in academic stress on the students, which VCPUSD (Vertically Challenging Pole Unified School District) set out to reduce. They established Mr. Etresfeul, a teacher with whom the district knew all the students were familiar (five students were randomly selected and shown a labelled photo of Mr. Estresfeul; all students were able to correctly identify him), as the head of a new program: the EGO program, whose letters stood for Exercise, Good night's sleep, and Omm—three of the seventy-six easy-to-remember tips for reducing stress that would be taught in the program.",
     "choices": {
-      "die": {
-        "fail": true,
-        "message": "Such is life."
+      "Continue": {
+        "message": "In addition to eliminating stress, the EGO program would also teach important virtues such as the equal treatment of all students, no matter their race, sexuality, or age. Due to the novelty of the program, it was to be mandatory only for the underclassmen. The free period—a time for students to catch up on their schoolwork and meet their teachers outside of class—would be replaced with EGO sessions (teachers participating in the EGO program would not be available to non-EGO students). The sessions would only meet weekly for half a period, compared to the other periods occurring multiple times a week, as to not seem too intrusive. To encourage relationship building, the students would be randomly grouped into isolated cohorts that were to remain the same throughout high school for cohort members to grow more familiar with each other than as they would with their classmates in other classes.",
+        "choices": {
+          "Continue": "char-intro"
+        }
       }
     }
+  },
+  "char-intro": {
+    "message": "yes."
   }
 }
