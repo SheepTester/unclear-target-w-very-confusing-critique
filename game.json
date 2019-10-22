@@ -18,6 +18,12 @@
     }
   },
   "intro": {
-    "message": "Pistole High School"
+    "message": "Pistole High School",
+    "choices": {
+      "die": {
+        "death": true,
+        "message": "Such is life."
+      }
+    }
   }
 }
