@@ -4,7 +4,7 @@
     "choices": {
       "Mrs. Hugson, a sweet lady known to bake cookies for her students every day. Although one's health may be of concern in being enticed by her pasteries, it would certainly be a punishment to have to smell their inviting aroma as a nonstudent.": "psych",
       "Mr. Elasier, an otherwise ordinary teacher who, with his isolated portable classroom and being a long-term employee of the Vertically Challenging Pole Unified School District, never enforces the school policies, allowing his students to eat, play, or even cut during class.": "psych",
-      "Mr. Katet, a mysterious fellow about whom little is known; his former students would only repeat the ominous word \"kittens\" whenever he was brought up.": "psych",
+      "Mr. Katet, a mysterious fellow about whom little is known; his former students would only repeat the ominous word “kittens” whenever he was brought up.": "psych",
       "Ms. Sens, an understanding individual who would never disallow her students doing work for other classes, for she found it an act of respect demonstrating that the students found her class to be an opportunity to destress rather than a source of academic pressure.": "psych"
     }
   },
@@ -63,6 +63,73 @@
     }
   },
   "begin-story": {
-    "message": "The first week as a high school freshman is a week of new experiences, so, of course, one should try to experience as many new things as possible. However, not even the older grades who had volunteered in the introductory freshman initiation camp could have predicted that instead of the freshmen being introduced to the freedom granted by the free periods, the school decided that *both* free periods should be spent on presenting their new EGO programs to them.\n..."
+    "message": "The first week as a high school freshman is a week of new experiences, so, of course, one should try to experience as many new things as possible. However, not even the introductory freshman initiation camp volunteers could have predicted the school’s decision to not introduce the freshmen to the new freedoms granted by the free periods but rather present their new EGO programs.\nNone of the older students know much about the new EGO program for freshmen, so you arrive two minutes late to your class. What should you say?",
+    "choices": {
+      "“I, Nevets Eux, am present!”": {
+        "message": "Your classmates stare at you. Apparently, your mentor has decided to do attendance near the end of the period because it was your second day of high school.",
+        "choices": {"Continue": "intro-bagne"}
+      },
+      "Remain silent.": {
+        "message": "Your mentor does not notice your arrival and marks you absent.",
+        "choices": {"Continue": "intro-bagne"}
+      }
+    }
+  },
+  "intro-bagne": {
+    "message": "Your mentor briefly introduces herself in a businesslike manner as Ms. Bagne, who attended a small community college in the north. She then pulls up a branded slide presentation about greetings.\n\t“Please have your students write their names on the provided index cards in a colour that suits them best,” she reads from the bullet points. She then has some students distribute the index cards and sharpies. What colour will you write your name in?",
+    "choices": {
+      "Red": "cohort-intro",
+      "Yellow": "cohort-intro",
+      "Green": "cohort-intro",
+      "Blue": "cohort-intro",
+      "White": {
+        "message": "White won’t show on the index cards, silly!",
+        "fail": true
+      }
+    }
+  },
+  "cohort-intro": {
+    "message": "Ms. Bagne only has black sharpies, so you write your name in black. She collects the index cards and continues reading off the slides.\n\t“Have your students introduce themselves by stating their name and favourite food.”\n\tWhich of your favourite foods will you say?",
+    "choices": {
+      "Ice cream": "cohort-intro-2",
+      "Pizza": "cohort-intro-2",
+      "Pizza specifically with pineapple": "cohort-intro-2",
+      "Some other obscure dish": "cohort-intro-2"
+    }
+  },
+  "cohort-intro-2": {
+    "message": "Ms. Bagne pulls names randomly from her freshly made stack of index cards, complimenting everyone’s food tastes. Suddenly, a specific food item launches the class--the three debate students--into a discussion that quickly transforms into a debate over a controversial political issue in the nation. Concerned for time, Bagne interrupts their conversation to continue their introductions, but the bell rings before she gets to you.",
+    "choices": {
+      "Continue": {
+        "message": "#Two days later: the second ~free period~ EGO session\nAn urgent misfortune has come to your attention. Your math teacher has announced both in class and online that a readiness examination will be administered for credit today after the EGO sessions. Unfortunately, you did not pay attention in class nor check online, and you have largely forgotten the formulas learnt the previous year. While the older students leisurely relax in their free periods, studying or entertaining themselves, you must trudge to your EGO cohort classroom.\nWhat shall be done with the math exam?",
+        "choices": {
+          "Request permission to study from Ms. Bagne.": {
+            "message": "Ms. Bagne tuts at you disappointedly. “It is your responsibility to be informed and study outside of school, not during class time. Please return to your seat.”",
+            "choices": {
+              "Study discreetly.": "study-discreetly",
+              "Be respectful and attempt to study during the passing period before math class.": "dont-study"
+            }
+          },
+          "Study discreetly.": "study-discreetly",
+          "Be respectful and attempt to study during the passing period before math class.": "dont-study"
+        }
+      }
+    }
+  },
+  "study-discreetly": {
+    "message": "Ms. Bagne immediately catches you as she starts class. She calls you up, confiscates your studying materials: your math notebook, phone, and pencil, and declares, “You may retrieve your belongings from the office at the end of school. Let this be a lesson to all of you!”",
+    "choices": {
+      "Continue": {
+        "message": "Your insufficient studying results in failing the exam. With a quick summoning from the counselling office, you are dropped to the math lane below. Your parents do not hesitate to express their disappointment.\nAfter school, you discover that Ms. Bagne had only returned his phone. The following EGO session, you request your belongs back from Ms. Bagne, but she says she has lost them.",
+        "choices": {"Continue": "october"}
+      }
+    }
+  },
+  "dont-study": {
+    "message": "The passing period was insufficient, and you fail the exam. With a quick summoning from the counselling office, you are dropped to the math lane below. Your parents do not hesitate to express their disappointment.",
+    "choices": {"Continue": "october"}
+  },
+  "october": {
+    "message": "#October\nMr. Angleon warmly welcomes his students in, calling out “How are you?” and greeting them by name as he casually sits on a stool. With a quick glance over the classroom, attendance was dealt with, and he starts with his math lesson. Students regularly ask thought-provoking questions throughout, and when he presents them a problem, they enthusiastically chatter over possible and alternative solutions. At times..."
   }
 }
