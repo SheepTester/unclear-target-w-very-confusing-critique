@@ -2,7 +2,7 @@
   "INIT": {
     "message": "These are some of the available EGO program mentors based on the rumours your friends have collected. Who would you rather have?",
     "choices": {
-      "Mrs. Hugson, a sweet lady known to bake cookies for her students every day. Although one's health may be of concern in being enticed by her pasteries, it would certainly be a punishment to have to smell their inviting aroma as a nonstudent.": "psych",
+      "Mrs. Hugson, a sweet lady known to bake cookies for her students every day. Although one’s health may be of concern in being enticed by her pasteries, it would certainly be a punishment to have to smell their inviting aroma as a nonstudent.": "psych",
       "Mr. Elasier, an otherwise ordinary teacher who, with his isolated portable classroom and being a long-term employee of the Vertically Challenging Pole Unified School District, never enforces the school policies, allowing his students to eat, play, or even cut during class.": "psych",
       "Mr. Katet, a mysterious fellow about whom little is known; his former students would only repeat the ominous word “kittens” whenever he was brought up.": "psych",
       "Ms. Sens, an understanding individual who would never disallow her students doing work for other classes, for she found it an act of respect demonstrating that the students found her class to be an opportunity to destress rather than a source of academic pressure.": "psych"
@@ -14,36 +14,38 @@
       "Continue": {
         "special": "title",
         "title": "Pistole offers a wide range of opportunities.",
-        "subtitle": "A work of fiction, &c.",
-        "continue": "ego-intro"
+        "subtitle": "A “choose”-your-own adventure game.",
+        "continue": "pole"
       }
     }
   },
-  "pole-intro": {
-    "message": "A 1769 expedition party encounters a troublesome metal rod mysteriously found erected on the ground; it had impaled the party’s main wagon, so the expeditioners camped nearby for several days for repairs. What should they do to the pole?",
+  "pole": {
+    "message": "A 1769 expedition party encounters a troublesome metal rod mysteriously found erected on the ground; it has impaled the party’s main wagon, so the expeditioners camp nearby for several days to repair. What should they do to the pole?",
     "choices": {
-      "Call it the Vertically Challenging Pole and found a town named after it.": "ego-intro",
+      "Call it the Vertically Challenging Pole and found a town named after it.": "ego",
       "Remove the pole to avoid further casualties.": {
         "message": "The members agree to pull out the pole; however, they cannot resist the temptation to found a town around it. The resulting town is aptly named Vertically Challenging Pole. Meanwhile, several attempts are made to remove the pole, but all fail; consequently, the members suffer major injuries and give up. The pole will later be toppled over by an unmanned vehicle in 1983.",
-        "choices": {"Continue": "ego-intro"}
+        "choices": {
+          "Continue": "ego"
+        }
       }
     }
   },
-  "ego-intro": {
-    "message": "Pistole High School, established in 1964, is a humble high school in Vertically Challenging Pole. As one of the top schools in the nation, with two thousand students attending each year, parents flock from around the world just to send their kids to the school. This has led to a spike in academic stress on the students, which the school administration intends on reducing.",
+  "ego": {
+    "message": "Pistole High School, established in 1964, is a humble high school in Vertically Challenging Pole. As one of the top schools in the nation, with two thousand students attending each year, parents flock from around the world just to send their kids to the school. This has led to a spike in academic stress on the students, especially the older ones, which the school administration intends on reducing.",
     "choices": {
-      "Establish Mr. Etresfeul, a teacher with whom the district knew all the students were familiar (five students were randomly selected and shown a labelled photo of Mr. Etresfeul, and all were able to correctly identify him), as the head of a new program.": {
-        "message": "The school initiates the EGO program (_E_xercise, _G_ood night's sleep, and _O_mm--three of the seventy-six easy-to-remember tips for reducing stress that would be taught in the program). When should EGO sessions take place?",
+      "Establish Mr. Etresfeul, a teacher with whom the district knew all the students were familiar (five students were randomly selected and shown a labelled photo of Mr. Etresfeul, and all were able to correctly identify his name), as the head of a new program.": {
+        "message": "The school initiates the EGO program (_E_xercise, _G_ood night’s sleep, and _O_mm—three of the seventy-six easy-to-remember tips for reducing stress that would be taught in the program). When should EGO sessions take place?",
         "choices": {
           "During lunch": {
             "message": "Students need to eat and attend clubs!",
             "fail": true
           },
           "After school": {
-            "message": "This would cause problems with students with after-school activities.",
+            "message": "This would cause problems for students with after-school events.",
             "fail": true
           },
-          "During the latter of the two weekly free periods--times for students to catch up on their schoolwork and meet their teachers outside of class": {
+          "During the latter of the two weekly free periods—times for students to catch up on their schoolwork and meet their teachers outside of class": {
             "message": "The school enthusiastically commends this idea. Of course, teachers participating in the EGO program will not be available to non-EGO students, but this can be resolved later.",
             "choices": {
               "Continue": {
@@ -53,7 +55,7 @@
                     "message": "There are not enough mentors for all the EGO cohorts.",
                     "fail": true
                   },
-                  "The freshmen only": "begin-story"
+                  "The freshmen only": "nevets"
                 }
               }
             }
@@ -62,74 +64,185 @@
       }
     }
   },
-  "begin-story": {
-    "message": "The first week as a high school freshman is a week of new experiences, so, of course, one should try to experience as many new things as possible. However, not even the introductory freshman initiation camp volunteers could have predicted the school’s decision to not introduce the freshmen to the new freedoms granted by the free periods but rather present their new EGO programs.\nNone of the older students know much about the new EGO program for freshmen, so you arrive two minutes late to your class. What should you say?",
+  "nevets": {
+    "message": "The first week as a high school freshman is a week of new experiences, so, of course, one should try to experience as many new things as possible. However, not even the introductory freshman initiation camp volunteers could have predicted the school’s decision to not introduce the freshmen to the new freedoms granted by the free periods but rather present their new EGO programs.\nNone of the older students know much about the new EGO program for freshmen, so not knowing how to get to your class, you arrive two minutes late. What should you say?",
     "choices": {
       "“I, Nevets Eux, am present!”": {
         "message": "Your classmates stare at you. Apparently, your mentor has decided to do attendance near the end of the period because it was your second day of high school.",
-        "choices": {"Continue": "intro-bagne"}
+        "choices": {
+          "Continue": "bagne"
+        }
       },
       "Remain silent.": {
         "message": "Your mentor does not notice your arrival and marks you absent.",
-        "choices": {"Continue": "intro-bagne"}
+        "choices": {
+          "Continue": "bagne"
+        }
       }
     }
   },
-  "intro-bagne": {
-    "message": "Your mentor briefly introduces herself in a businesslike manner as Ms. Bagne, who attended a small community college in the north. She then pulls up a branded slide presentation about greetings.\n\t“Please have your students write their names on the provided index cards in a colour that suits them best,” she reads from the bullet points. She then has some students distribute the index cards and sharpies. What colour will you write your name in?",
+  "bagne": {
+    "message": "Your mentor briefly introduces herself in a businesslike manner as Ms. Bagne, who has attended a small community college in the North. She then pulls up a branded slide presentation about greetings.\n\t“Please have your students write their names on the provided index cards in a colour that suits them best,” she reads from the bullet points. She then has some students distribute the index cards and sharpies. What colour will you write your name in?",
     "choices": {
-      "Red": "cohort-intro",
-      "Yellow": "cohort-intro",
-      "Green": "cohort-intro",
-      "Blue": "cohort-intro",
+      "Red": "sharpies",
+      "Yellow": "sharpies",
+      "Green": "sharpies",
+      "Blue": "sharpies",
       "White": {
         "message": "White won’t show on the index cards, silly!",
         "fail": true
       }
     }
   },
-  "cohort-intro": {
-    "message": "Ms. Bagne only has black sharpies, so you write your name in black. She collects the index cards and continues reading off the slides.\n\t“Have your students introduce themselves by stating their name and favourite food.”\n\tWhich of your favourite foods will you say?",
+  "sharpies": {
+    "message": "Ms. Bagne only has black sharpies, so you write your name in black. She collects the index cards and continues reading off the slides.\n\t“Have your students introduce themselves by stating their name and favourite food.” Which of your favourite foods will you say?",
     "choices": {
-      "Ice cream": "cohort-intro-2",
-      "Pizza": "cohort-intro-2",
-      "Pizza specifically with pineapple": "cohort-intro-2",
-      "Some other obscure dish": "cohort-intro-2"
+      "Ice cream": "students",
+      "Pizza": "students",
+      "Pizza specifically with pineapple": "students",
+      "Some other obscure dish": "students"
     }
   },
-  "cohort-intro-2": {
-    "message": "Ms. Bagne pulls names randomly from her freshly made stack of index cards, complimenting everyone’s food tastes. Suddenly, a specific food item launches the class--the three debate students--into a discussion that quickly transforms into a debate over a controversial political issue in the nation. Concerned for time, Bagne interrupts their conversation to continue their introductions, but the bell rings before she gets to you.",
+  "students": {
+    "message": "Ms. Bagne pulls names randomly from her freshly made stack of index cards, complimenting everyone’s food tastes. Suddenly, a specific food item launches the class—the three debate students—into a discussion that quickly transforms into a debate over a controversial political issue in the nation. Concerned for time, Bagne interrupts their conversation to continue their introductions, but the bell rings before she gets to you.",
     "choices": {
       "Continue": {
-        "message": "#Two days later: the second ~free period~ EGO session\nAn urgent misfortune has come to your attention. Your math teacher has announced both in class and online that a readiness examination will be administered for credit today after the EGO sessions. Unfortunately, you did not pay attention in class nor check online, and you have largely forgotten the formulas learnt the previous year. While the older students leisurely relax in their free periods, studying or entertaining themselves, you must trudge to your EGO cohort classroom.\nWhat shall be done with the math exam?",
+        "message": "#Two days later: the second ~free period~ EGO session\nAn urgent misfortune has come to your attention. Your Spanish teacher has announced both in class and online that a readiness examination will be administered for credit today after the EGO sessions. Unfortunately, you did not pay attention in class nor check online, and you have largely forgotten the formulas learnt the previous year. While the older students leisurely relax in their free periods, studying or entertaining themselves, you must trudge to your EGO cohort classroom.\nWhat shall be done with the Spanish exam?",
         "choices": {
           "Request permission to study from Ms. Bagne.": {
             "message": "Ms. Bagne tuts at you disappointedly. “It is your responsibility to be informed and study outside of school, not during class time. Please return to your seat.”",
             "choices": {
-              "Study discreetly.": "study-discreetly",
-              "Be respectful and attempt to study during the passing period before math class.": "dont-study"
+              "Study discreetly.": "studydiscreetly",
+              "Attempt to study during the passing period before math class instead.": "respect"
             }
           },
-          "Study discreetly.": "study-discreetly",
-          "Be respectful and attempt to study during the passing period before math class.": "dont-study"
+          "Study discreetly.": "studydiscreetly",
+          "Be respectful and attempt to study during the passing period before math class instead.": "respect"
         }
       }
     }
   },
-  "study-discreetly": {
-    "message": "Ms. Bagne immediately catches you as she starts class. She calls you up, confiscates your studying materials: your math notebook, phone, and pencil, and declares, “You may retrieve your belongings from the office at the end of school. Let this be a lesson to all of you!”",
+  "studydiscreetly": {
+    "message": "Ms. Bagne starts class with, “As you know, I am a very forgiving teacher—” and immediately catches you. She calls you up, confiscates your studying materials: your Spanish notebook, phone, and pencil, and declares, “You may retrieve your belongings from the office at the end of school. Let this be a lesson to all of you!”",
     "choices": {
       "Continue": {
-        "message": "Your insufficient studying results in failing the exam. With a quick summoning from the counselling office, you are dropped to the math lane below. Your parents do not hesitate to express their disappointment.\nAfter school, you discover that Ms. Bagne had only returned his phone. The following EGO session, you request your belongs back from Ms. Bagne, but she says she has lost them.",
-        "choices": {"Continue": "october"}
+        "message": "Your insufficient studying results in failing the exam. With a quick summoning from the counselling office, you are dropped to the previous Spanish level. Your parents do not hesitate to express their disappointment.\nAfter school, you discover that Ms. Bagne had returned only his phone to the office. At the end of the following EGO session, in which she rambled about how responsible she was during her own school years, you request your belongings back, but she says she has lost them.",
+        "choices": {
+          "Continue": "october"
+        }
       }
     }
   },
-  "dont-study": {
-    "message": "The passing period was insufficient, and you fail the exam. With a quick summoning from the counselling office, you are dropped to the math lane below. Your parents do not hesitate to express their disappointment.",
-    "choices": {"Continue": "october"}
+  "respect": {
+    "message": "The passing period was insufficient, and you fail the exam. With a quick summoning from the counselling office, you are dropped to the previous Spanish level. Your parents do not hesitate to express their disappointment.",
+    "choices": {
+      "Continue": "october"
+    }
   },
   "october": {
-    "message": "#October\nMr. Angleon warmly welcomes his students in, calling out “How are you?” and greeting them by name as he casually sits on a stool. With a quick glance over the classroom, attendance was dealt with, and he starts with his math lesson. Students regularly ask thought-provoking questions throughout, and when he presents them a problem, they enthusiastically chatter over possible and alternative solutions. At times..."
+    "message": "#October\nMr. Angleon warmly welcomes his students in, calling out “How are you?” and greeting them by name as he casually sits on a stool. A quick glance over the classroom concludes attendance, and he starts with his math lesson. Students regularly ask thought-provoking questions throughout, and when he presents them a problem, they immediately start enthusiastically chattering over possible and alternative solutions. At times, the table groups go off-topic, and the teacher even joins in when a group is done.",
+    "choices": {
+      "Continue": {
+        "message": "The period ends and you arrive at your EGO cohort. The students file in silently to their regular seats where they idle silently on their phones. The bell rings and the phones promptly disappear.\n\tMs. Bagne does roll call and arrives at your name. “Nevets?”",
+        "choices": {
+          "“Here.”": "consent",
+          "“Not here.”": {
+            "message": "Ms. Bagne eyes you suspiciously and marks you present.",
+            "choices": {
+              "Continue": "consent"
+            }
+          },
+          "Stay silent.": {
+            "message": "Ms. Bagne repeats, “Nevets? Does anyone know where Nevets is?” A group member of whom you forgot the name taps you on your shoulder.",
+            "choices": {
+              "Here!": "consent",
+              "Remain silent.": {
+                "message": "He announces your presence for you.",
+                "choices": {
+                  "Continue": "consent"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "consent": {
+    "message": "The mentor goes through the day’s slide presentation to the silent class.\n\t“Have your students discuss the importance of consent in groups,” she reads. You do not know what to say.",
+    "choices": {
+      "Say nothing.": {
+        "message": "The other members concur with your silence and the conversation dies.",
+        "choices": {
+          "Continue": {
+            "message": "A new prompt comes requiring that the students randomly regroup; in the new groups, despite being a quarter into the year, the students barely know each other. The topic of the recent wildfires in the nation is brought up, but with a stern reminder to stay on task, the group silences itself once more.\nAt last, the students return to their seats. The mentor announces a feedback survey for the program. It asks, “How much more connected are you to your EGO cohort than to the students in your regular classes?”",
+            "choices": {
+              "More connected": "survey2",
+              "About as connected": "survey2",
+              "Less connected": "survey2"
+            }
+          }
+        }
+      }
+    }
+  },
+  "survey2": {
+    "message": "“Please rank the EGO program: Providing food in order to build community.”",
+    "choices": {
+      "1": "survey3",
+      "2": "survey3",
+      "3": "survey3",
+      "4": "survey3",
+      "5": "survey3"
+    }
+  },
+  "survey3": {
+    "message": "“Please rank the EGO program: Games.”",
+    "choices": {
+      "1": "survey4",
+      "2": "survey4",
+      "3": "survey4",
+      "4": "survey4",
+      "5": "survey4"
+    }
+  },
+  "survey4": {
+    "message": "“Please leave additional comments below.”",
+    "choices": {
+      "“The EGO program is great! Keep up the good work!”": "surveyend",
+      "“remove ego program”": "surveyend",
+      "“The EGO program is awesome, but there are a few things I would change to make it even better:” followed by a list of suggestions for improvements.": "surveyend",
+      "Leave it blank.": "surveyend"
+    }
+  },
+  "surveyend": {
+    "message": "The bell rings just as you submit your survey. The survey thanks you for your valuable feedback.",
+    "choices": {
+      "Continue": {
+        "message": "#Next week\nThe session commences with a broadcast with the bulky face of Mr. Etresfeul blanketing the screen. He begins by celebrating the start of their healthy eating unit, then continues on to the feedback survey results, which seem to indicate that the students are content with the idea of providing food at EGO meetings. Thus, the school intends to distribute to each cohort...",
+        "choices": {
+          "chips.": "game",
+          "donuts.": "game",
+          "pizza.": "game",
+          "Kellogg’s Rice Krispies Treats.": "game"
+        }
+      }
+    }
+  },
+  "game": {
+    "message": "In addition, as the students appear to want more games, he intends on implementing more games where...",
+    "choices": {
+      "the last person to find a seat has to answer a prompt.": "motto",
+      "everyone finds another person in the classroom to discuss a prompt.": "motto",
+      "each person in a randomly assigned group speaks of a prompt for a limited amount of time.": "motto"
+    }
+  },
+  "motto": {
+    "message": "The broadcast ends with the patriotic school motto: “Pawns rule!”",
+    "choices": {
+      "Continue": {
+        "message": "#January\nDespite new regular classes, the EGO cohorts remain the same for stronger relationships to form. However, some teachers have decided to stop being a mentor, so their students have been redistributed to the remaining cohorts.\nAs student input is extremely valued by the school, the first session has the students take the same feedback survey from the previous quarter, with the only difference being the removal of the additional comments section.\nThe EGO sessions continue as they always do, and you still are unable to study.\n#The end"
+      }
+    }
   }
 }

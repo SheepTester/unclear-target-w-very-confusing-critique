@@ -30,11 +30,13 @@ function format(str) {
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/\*[^*\\]+\*/g, em => `<em>${em.slice(1, -1)}</em>`) // *text* italicizes it
+    .replace(/\*([^*\\]+)\*/g, (_, em) => `<em>${em}</em>`) // *text* italicizes it
     .replace(/\*\\/g, '*') // *\ -> * (hopefully)
-    .replace(/_[^_\\]+_/g, ins => `<ins>${ins.slice(1, -1)}</ins>`) // _text_ underlines it
+    .replace(/_([^_\\]+)_/g, (_, ins) => `<ins>${ins}</ins>`) // _text_ underlines it
     .replace(/_\\/g, '_') // _\ -> _
-    .replace(/--/g, '&mdash;')
+    .replace(/~([^_\\]+)~/g, (_, del) => `<del>${del}</del>`) // ~text~ strikes through it
+    .replace(/~\\/g, '~') // ~\ -> ~
+    .replace(/\n#(.*)\n/g, (_, note) => `\n<span class="note">${note}</span>`) // #text makes it a note
     .split('\n')
     .map(p => `<p>${p}</p>`)
     .join('')
