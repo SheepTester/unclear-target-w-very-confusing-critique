@@ -95,7 +95,7 @@
     }
   },
   "sharpies": {
-    "message": "Ms. Bagne only has black sharpies, so you write your name in black. She collects the index cards and continues reading off the slides.\n\t“Have your students introduce themselves by stating their name and favourite food.” Which of your favourite foods will you say?",
+    "message": "Ms. Bagne only has black sharpies, so you write your name in black. She collects the index cards and continues reading off the slides.\n\t“Have your students introduce themselves by stating their name and favourite food.” Which of your favourite foods will you share?",
     "choices": {
       "Ice cream": "students",
       "Pizza": "students",
@@ -126,7 +126,7 @@
     "message": "Ms. Bagne starts class with, “As you know, I am a very forgiving teacher—” and immediately catches you. She calls you up, confiscates your studying materials: your Spanish notebook, phone, and pencil, and declares, “You may retrieve your belongings from the office at the end of school. Let this be a lesson to all of you!”",
     "choices": {
       "Continue": {
-        "message": "Your insufficient studying results in failing the exam. With a quick summoning from the counselling office, you are dropped to the previous Spanish level. Your parents do not hesitate to express their disappointment.\nAfter school, you discover that Ms. Bagne had returned only his phone to the office. At the end of the following EGO session, in which she rambled about how responsible she was during her own school years, you request your belongings back, but she says she has lost them.",
+        "message": "Your insufficient studying results in failing the exam. With a quick summoning from the counselling office, you are dropped to the previous Spanish level. Your parents do not hesitate to express their disappointment.\nAfter school, you discover that Ms. Bagne had returned only your phone to the office. At the end of the following EGO session, in which she rambled about how responsible she was during her own school years, you request your belongings back, but she says she has lost them.",
         "choices": {
           "Continue": "october"
         }

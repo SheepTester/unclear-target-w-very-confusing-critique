@@ -1,4 +1,5 @@
 # https://cson-json-converter.netlify.com/
+# This document has been out of date since this line was added
 
 INIT:
   message: 'These are some of the available EGO program mentors based on the rumours your friends have collected. Who would you rather have?'
