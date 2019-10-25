@@ -11,7 +11,7 @@ const sceneOrder = []
 let width = window.innerWidth
 let height = window.innerHeight
 
-const MIN_TOP = 20
+const MIN_TOP = 40
 function updateScenes () {
   if (!sceneOrder.length) return
   const firstBox = boundingBoxes.get(sceneOrder[0].elem)
@@ -36,7 +36,7 @@ function format(str) {
     .replace(/_\\/g, '_') // _\ -> _
     .replace(/~([^_\\]+)~/g, (_, del) => `<del>${del}</del>`) // ~text~ strikes through it
     .replace(/~\\/g, '~') // ~\ -> ~
-    .replace(/\n#(.*)\n/g, (_, note) => `\n<span class="note">${note}</span>`) // #text makes it a note
+    .replace(/#(.*)\n?/g, (_, note) => `<span class="context">${note}</span>\n`) // #text makes it a note
     .split('\n')
     .map(p => `<p>${p}</p>`)
     .join('')

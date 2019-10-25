@@ -51,6 +51,11 @@ body {
   opacity: 0.5;
   font-size: 14px;
 }
+.context {
+  display: block;
+  opacity: 0.7;
+  text-align: center;
+}
 
 p:first-child {
   margin-top: 0;
@@ -112,6 +117,8 @@ p:last-child {
   font-size: 24px;
   animation: fade-in .5s 1s forwards;
   margin-bottom: 20px;
+  line-height: 1;
+  margin-top: 5px;
 }
 .cover {
   position: fixed;
