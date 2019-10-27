@@ -68,7 +68,7 @@
     "message": "The first week as a high school freshman is a week of new experiences, so, of course, one should try to experience as many new things as possible. However, not even the introductory freshman initiation camp volunteers could have predicted the school’s decision to not introduce the freshmen to the new freedoms granted by the free periods but rather present their new EGO programs.\nNone of the older students know much about the new EGO program for freshmen, so not knowing how to get to your class, you arrive two minutes late. What should you say?",
     "choices": {
       "“I, Nevets Eux, am present!”": {
-        "message": "Your classmates stare at you. Apparently, your mentor has decided to do attendance near the end of the period because it was your second day of high school.",
+        "message": "Your classmates stare at you. Apparently, your mentor has decided to do attendance near the end of the period because it is your second day of high school.",
         "choices": {
           "Continue": "bagne"
         }
